@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Selamat Hari Raya Idul Fitri</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body{
+			background-color: black;
+		}
+		main{
+			width: 100%;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			padding: 10px;
+		}
+		h3{
+			font-family:  'Oswald', sans-serif;
+			margin-top: 10px;
+			font-size: 1.5em;
+			color: white;
+			text-transform: uppercase;
+			text-align: center;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<img src="200w.webp" alt="">
+		<h3></h3>
+	</main>
+	<script>
+		const h3=document.querySelector("h3");
+		const text="Selamat Hari Raya Idul Fitri 🙏";
+		let index=0;
+		let interval=setInterval(()=>{
+			h3.innerHTML+=text[index]
+			index++
+			if(index>=text.length){
+				clearInterval(interval)
+			}
+		},50)
+	</script>
+</body>
+</html>
